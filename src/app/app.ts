@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { DUMMY_USERS } from './dummy-users';
 
 import { Header } from './header/header';
 import { User } from './user/user';
@@ -12,4 +13,6 @@ import { User } from './user/user';
 })
 export class App {
   protected readonly title = signal('first-angular-project');
+
+  users = DUMMY_USERS;
 }
