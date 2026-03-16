@@ -4,10 +4,12 @@ import { DUMMY_USERS } from './dummy-users';
 
 import { Header } from './header/header';
 import { User } from './user/user';
+import { Tasks } from './tasks/tasks';
+import { UserType } from './types/user';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, RouterOutlet, User],
+  imports: [Header, RouterOutlet, User, Tasks],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
 })
@@ -16,7 +18,9 @@ export class App {
 
   users = DUMMY_USERS;
 
+  selectedUser!: UserType | undefined;
+
   onSelectUser(id: string) {
-    console.log(id);
+    this.selectedUser = this.users.find((user) => user.id === id);
   }
 }
