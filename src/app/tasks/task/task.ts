@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TaskType } from '../../types/task';
 
 @Component({
   selector: 'app-task',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './task.html',
   styleUrl: './task.css',
 })
-export class Task {}
+export class Task {
+  @Input({ required: true }) task!: TaskType;
+}
