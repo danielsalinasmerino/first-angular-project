@@ -11,9 +11,13 @@ import { UserType } from '../user/user.model';
 })
 export class Tasks {
   @Input() user?: UserType;
-  allTasks = DUMMY_TASKS;
+  tasks = DUMMY_TASKS;
 
   get selectedUserTasks() {
-    return this.allTasks.filter((task) => task.userId === this.user?.id);
+    return this.tasks.filter((task) => task.userId === this.user?.id);
+  }
+
+  onCompleteTask(id: string) {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
   }
 }
