@@ -5,7 +5,7 @@ import { DUMMY_USERS } from './dummy-users';
 import { Header } from './header/header';
 import { User } from './user/user';
 import { Tasks } from './tasks/tasks';
-import { UserType } from './types/user';
+import { UserType } from './user/user.model';
 
 @Component({
   selector: 'app-root',

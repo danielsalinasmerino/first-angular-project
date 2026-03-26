@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Task } from './task/task';
 import { DUMMY_TASKS } from '../dummy-tasks';
-import { UserType } from '../types/user';
+import { UserType } from '../user/user.model';
 
 @Component({
   selector: 'app-tasks',
