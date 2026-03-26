@@ -29,7 +29,7 @@ export class Tasks {
     this.isAddingTask = true;
   }
 
-  onCancel() {
+  onCancelAddTask() {
     this.isAddingTask = false;
   }
 }
